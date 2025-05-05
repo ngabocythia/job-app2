@@ -6,17 +6,18 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import AddJobForm from "./AddJobForm";
+import { Button } from "./ui/button";
 
 const AddJob = () => {
   return (
     <Dialog>
-      <DialogTrigger>Open</DialogTrigger>
-      <DialogContent>
+      <DialogTrigger ><p className="cursor-pointer">Add Job</p></DialogTrigger>
+      <DialogContent className={'border-white/10'}>
         <DialogHeader>
-          <DialogTitle>Are you absolutely sure?</DialogTitle>
+          <DialogTitle className={'mb-12 capitalize'}> Details of job</DialogTitle>
+            <AddJobForm/>
           <DialogDescription>
-            This action cannot be undone. This will permanently delete your
-            account and remove your data from our servers.
           </DialogDescription>
         </DialogHeader>
       </DialogContent>
