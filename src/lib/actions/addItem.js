@@ -1,6 +1,7 @@
 'use server';
 
 
+import { revalidatePath } from "next/cache";
 import { connectToDatabase } from "../database";
 import Item from "../model/Item";
 
@@ -21,6 +22,7 @@ export async function AddItem(itemData) {
     const savedItem = await newItem.save();
 
     console.log('Item added successfully:', savedItem);
+    revalidatePath('/')
     return { success: true };
   } catch (error) {
     console.error('Error adding item:', error);

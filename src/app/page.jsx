@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "../components/ui/button";
 import {
   Card,
   CardContent,
@@ -6,15 +6,15 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { getALLJob } from "@/lib/actions/getItem";
+} from "../components/ui/card";
+import { getALLJob } from "../lib/actions/getItem";
 
 export default async function Home() {
   const item = await getALLJob();
   console.log(item);
 
   return (
-    <div className="grid grid-cols-1 gap-6 p-4 md:grid-cols-4 mt-8 ">
+    <div className="grid grid-cols-1 gap-6 p-4 md:grid-cols-2 lg:grid-cols-4 mt-8 ">
       {item.map((job, i) => (
         <Jobcard
           key={job._id}
