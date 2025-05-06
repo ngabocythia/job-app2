@@ -46,7 +46,6 @@ const AddJobForm = () => {
       description: formData.get("description"),
      
     };
-    console.log(itemData);
   
     const response = await AddItem(itemData);
     console.log(response);

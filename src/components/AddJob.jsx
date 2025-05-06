@@ -16,6 +16,7 @@ const AddJob = () => {
       <DialogContent className={'border-white/10'}>
         <DialogHeader>
           <DialogTitle className={'mb-12 capitalize'}> Details of job</DialogTitle>
+            
             <AddJobForm/>
           <DialogDescription>
           </DialogDescription>

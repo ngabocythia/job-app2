@@ -8,7 +8,7 @@ export default function Navbar() {
       <div className="text-white text-lg font-bold">Job app</div>
       <ul className="flex space-x-4">
         <div  className="text-white hover:text-gray-400">
-          <AddJob/>
+         <AddJob/>
         </div>
         <Link href="/"  className="text-white hover:text-gray-400">
           About
